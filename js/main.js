@@ -403,6 +403,26 @@
   }
 
   /* ============================================================
+     EFEKTY — POKAŻ WIĘCEJ
+  ============================================================ */
+  function initEffectsToggle() {
+    var btn = document.getElementById('effects-toggle');
+    if (!btn) return;
+
+    var extra = document.querySelectorAll('.effect-card--extra');
+    var expanded = false;
+
+    btn.addEventListener('click', function () {
+      expanded = !expanded;
+      extra.forEach(function (card) {
+        card.style.display = expanded ? 'block' : 'none';
+      });
+      btn.textContent = expanded ? 'Zwiń' : 'Pokaż wszystkie efekty (32)';
+      btn.setAttribute('aria-expanded', expanded);
+    });
+  }
+
+  /* ============================================================
      INICJALIZACJA
   ============================================================ */
   document.addEventListener('DOMContentLoaded', function () {
@@ -414,6 +434,7 @@
     initFormValidation();
     initAccordion();
     initActiveNavLinks();
+    initEffectsToggle();
   });
 
 })();
