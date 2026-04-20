@@ -1026,6 +1026,69 @@ em { font-style: italic; }
 }
 
 /* ============================================================
+   11b. SEKCJA: EFEKTY
+   ============================================================ */
+
+.section-effects {
+  position: relative;
+  padding-block: var(--space-3xl);
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 10%, rgba(201,160,106,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 90%, rgba(212,168,160,0.10) 0%, transparent 55%),
+    linear-gradient(180deg, #FDF9F5 0%, #FAF6F0 100%);
+  overflow: hidden;
+}
+
+.effects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  position: relative; z-index: 1;
+}
+
+.effect-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(201,160,106,0.15);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.effect-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.effect-card__img-wrapper {
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+.effect-card__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+.effect-card:hover .effect-card__img { transform: scale(1.04); }
+
+.effect-card__label {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .effects__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .effects__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================================
    12. SEKCJA: OPINIE
    — warm ivory gradient, large editorial quotes
    ============================================================ */
