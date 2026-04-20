@@ -889,7 +889,7 @@
         </div>
 
         <div class="effects__cta">
-          <button class="btn btn--outline-dark" id="effects-toggle" aria-expanded="false">
+          <button class="btn btn--outline-dark" id="effects-toggle" aria-expanded="false" onclick="var cards=document.querySelectorAll('.effect-card--extra'),exp=this.getAttribute('aria-expanded')==='true';exp=!exp;cards.forEach(function(c){c.style.display=exp?'block':'none';});this.textContent=exp?'Zwiń':'Pokaż wszystkie efekty (32)';this.setAttribute('aria-expanded',exp);">
             Pokaż wszystkie efekty (32)
           </button>
         </div>
