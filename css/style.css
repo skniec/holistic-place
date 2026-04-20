@@ -1037,10 +1037,7 @@ em { font-style: italic; }
 .section-effects {
   position: relative;
   padding-block: var(--space-3xl);
-  background:
-    radial-gradient(ellipse 60% 40% at 10% 10%, rgba(201,160,106,0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 90% 90%, rgba(212,168,160,0.10) 0%, transparent 55%),
-    linear-gradient(180deg, #FDF9F5 0%, #FAF6F0 100%);
+  background: var(--color-cream);
   overflow: hidden;
 }
 
@@ -1275,10 +1272,7 @@ em { font-style: italic; }
 .section-news {
   position: relative;
   padding-block: var(--space-3xl);
-  background:
-    radial-gradient(ellipse 55% 40% at 90% 10%, rgba(201,160,106,0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 45% 40% at 10% 90%, rgba(212,168,160,0.10) 0%, transparent 55%),
-    linear-gradient(180deg, #FAF6F0 0%, #FDF9F5 100%);
+  background: var(--color-cream);
   overflow: hidden;
 }
 
